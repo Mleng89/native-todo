@@ -1,20 +1,69 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	const [userInput, setUserInput] = useState('');
+	const [todos, setTodos] = useState([]);
+	function goalInputHandler(inputText) {
+		setUserInput(inputText);
+	}
+
+	function addTodoHandler() {
+		setTodos((currTodos) => [...todos, userInput]);
+	}
+	return (
+		<View style={styles.appContainer}>
+			<View style={styles.inputContainer}>
+				<TextInput
+					style={styles.textInput}
+					placeholder='Current todos'
+					onChangeText={goalInputHandler}
+				/>
+				<Button title='Add this!' onPress={addTodoHandler} />
+			</View>
+			<View style={styles.goalsContainer}>
+				<Text>List of todos:</Text>
+				{todos.map((input) => (
+					<View style={styles.todoItems} key={Math.random() * 10}>
+						<Text style={{ color: '#fff' }}>{input}</Text>
+					</View>
+				))}
+			</View>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+	appContainer: {
+		flex: 1,
+		paddingTop: 50,
+		paddingHorizontal: 15,
+	},
+	inputContainer: {
+		flex: 1,
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		marginBottom: 25,
+		borderBottomWidth: 1,
+		borderBottomColor: '#cccccc',
+	},
+	textInput: {
+		borderWidth: 2,
+		borderColor: '#cccccc',
+		width: '70%',
+		marginRight: 8,
+		padding: 8,
+	},
+	goalsContainer: {
+		marginTop: 10,
+		flex: 4,
+		alignItems: 'center',
+	},
+	todoItems: {
+		margin: 10,
+		padding: 10,
+		borderRadius: 10,
+		backgroundColor: '#5e0acc',
+	},
 });
