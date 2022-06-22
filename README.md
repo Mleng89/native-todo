@@ -1,6 +1,6 @@
 # Todo
 
-## Basic todo application on mobile platform
+Basic todo application on mobile platform
 
 ## Running development of application
 
