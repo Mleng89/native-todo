@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function App() {
@@ -7,14 +7,17 @@ export default function App() {
 	function goalInputHandler(inputText) {
 		setUserInput(inputText);
 	}
+	const inputRef = useRef();
 
 	function addTodoHandler() {
 		setTodos((currTodos) => [...todos, userInput]);
+		inputRef.current.setNativeProps({ text: '' });
 	}
 	return (
 		<View style={styles.appContainer}>
 			<View style={styles.inputContainer}>
 				<TextInput
+					ref={inputRef}
 					style={styles.textInput}
 					placeholder='Current todos'
 					onChangeText={goalInputHandler}
