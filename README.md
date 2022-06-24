@@ -16,7 +16,7 @@ In your terminal:
 
 ## Demo
 
-<img src="./assets/RPReplay_Final1655862233.gif" width="450" height="450"/>
+<img src="./assets/RPReplay_Final1655862233.gif" width="450" height="550"/>
 
 ### Notes:
 
