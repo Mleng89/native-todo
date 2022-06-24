@@ -16,7 +16,7 @@ In your terminal:
 
 ## Demo
 
-<img src="./assets/demo.gif" width="450" height="550"/>
+<img src="./assets/demo.gif" width="350" height="550"/>
 
 ### Notes:
 
