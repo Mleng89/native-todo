@@ -16,7 +16,7 @@ In your terminal:
 
 ## Demo
 
-![Demo](https://github.com/Mleng89/native-todo/blob/main/assets/RPReplay_Final1655862233.gif)
+<img src="./assets/RPReplay_Final1655862233.gif" width="450" height="450"/>
 
 ### Notes:
 
