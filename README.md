@@ -14,6 +14,10 @@ In your terminal:
 
 > Note: On MacOS you must have Xcode installed to run an iPhone simulator. If not, on your respective smart phone, find `Expo Client` or `Expo Go` and download the application to run development on a physical device.
 
+## Demo
+
+![Demo](https://github.com/Mleng89/native-todo/blob/main/assets/RPReplay_Final1655862233.gif)
+
 ### Notes:
 
 _Problem_: Clearing TextInput after submit
